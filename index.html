@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="style.css">
+<title> JavaScript assignment</title>
+<script src='app.js'></script>
+
+<script language="JavaScript">
+
+  function CelsiusConverter(){
+  document.converter.fahrenheit.value = (document.converter.celsius.value * 9 / 5) + 32
+  document.converter.kelvin.value = document.converter.celsius.value * 1 + 273.15
+  }
+  function FahrenheitConverter(){
+  document.converter.celsius.value = (document.converter.fahrenheit.value - 32) * 5 / 9
+  document.converter.kelvin.value=((document.converter.fahrenheit.value - 32)*5/9)+273.15
+  }
+  function KelvinConverter(){
+  document.converter.celsius.value = document.converter.kelvin.value - 273.15
+  document.converter.fahrenheit.value=((document.converter.kelvin.value - 273.15)*9/5)+32
+  }
+
+  </script>
+
+  </head>
+  <body>
+   <div> <h2>Student's Bio Data</h2>
+<p>click here to see the saved student's data</p>
+<button onclick="alert('Jhone Doe')">Name</button>
+<button onclick="alert('15 years Old')">Age</button>
+<button onclick="alert('Certified Mobile Application Development')">Degree</button>
+</div>
+
+<div class="rules">
+  <h2> Rules for naming Jawascript variables</h2>
+  <button onclick="alert('$Hamzakhan, _hamzaKhan, Hamzakhan')">click here for popup</button>
+</div>
+
+
+<div>
+<h2>Temperature Converter</h2>
+  <form name="converter">
+    Celsius: <input type="text" name="celsius" onChange="CelsiusConverter()"><br />
+    Fahrenheit: <input type="text" name="fahrenheit" onChange="FahrenheitConverter()"><br />
+    Kelvin: <input type="text" name="kelvin" onChange="KelvinConverter()"><br />
+    <input type="button" value="Convert!" />
+    </form>  
+
+</div>
+  </body>
+</html>
